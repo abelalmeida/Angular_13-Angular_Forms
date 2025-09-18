@@ -67,3 +67,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - https://angular.dev/guide/forms/template-driven-forms
 
 
+## Reactive forms
+- - using special directives we can access - connect elements to the html elements
+- import ReactiveFormsModule
+
+- What are some form validators?
+- - FromControl class 
+- - https://angular.dev/api/forms/Validators
+
+
+## Adding custom validators to template-driven forms
+In template-driven forms, add a directive to the templa
+- https://angular.dev/guide/forms/form-validation#adding-custom-validators-to-template-driven-forms

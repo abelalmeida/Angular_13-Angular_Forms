@@ -1,6 +1,6 @@
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators, AbstractControl } from '@angular/forms';
-import { debounceTime, of } from 'rxjs';
+import { debounceTime, first, of } from 'rxjs';
 
 // own validator dummy check my password has ? 
 
@@ -70,6 +70,34 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', {
       validators: [Validators.required, Validators.minLength(6), mustContainQuestionMark],
     }),
+    confirmPassword: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(6)],
+    }),
+    firstName: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(2)],
+    }),
+    lastName: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(2)],
+    }),
+    street: new FormControl('', {
+      validators: [Validators.required],
+    }),
+    number: new FormControl('', {
+      validators: [Validators.required],
+    }),
+    postalCode: new FormControl('', {
+      validators: [Validators.required],
+    }),
+    city: new FormControl('', {
+      validators: [Validators.required],
+    }),
+    role: new FormControl<'student' | 'teacher' | 'employee' | 'founder' | 'other'>('student', {
+      validators: [Validators.required],
+    }),
+    agree: new FormControl(false, {
+      validators: [Validators.requiredTrue],
+    }),
+
   });
 
   get emailIsInvalid(){

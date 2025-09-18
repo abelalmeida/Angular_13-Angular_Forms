@@ -20,6 +20,36 @@ export class SignupComponent {
       password: new FormControl('', {
         validators: [Validators.required, Validators.minLength(6)],
       }),
+      confirmPassword: new FormControl('', {
+        validators: [Validators.required, Validators.minLength(6)],
+      }),
+      firstName: new FormControl('', {
+        validators: [Validators.required, Validators.minLength(2)],
+      }),
+      lastName: new FormControl('', {
+        validators: [Validators.required, Validators.minLength(2)],
+      }),
+      street: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      number: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      postalCode: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      city: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      role: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      acquisition: new FormControl('', {
+        validators: [Validators.required],
+      }),
+      agree: new FormControl(false, {
+        validators: [Validators.requiredTrue],
+      }),
     });
 
   onSubmit() {
@@ -28,6 +58,9 @@ export class SignupComponent {
   const enteredEmail = this.form.controls.email.value;
   const enteredPassword = this.form.controls.password.value
   console.log(enteredEmail, enteredPassword);
+
+  this.form.reset();
+  
   
   }
 }

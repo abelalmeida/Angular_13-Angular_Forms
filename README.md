@@ -55,6 +55,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - we use # form  - htmlformelement
 -  we use (ngSubmit) event- handler trigger a onSubmit method.
 - what kind of form for the onSubmit() function? hoover over #form -`(reference) form: NgForm`
+- https://angular.dev/guide/forms/template-driven-forms
 
 - - also validate user
 
@@ -70,6 +71,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Reactive forms
 - - using special directives we can access - connect elements to the html elements
 - import ReactiveFormsModule
+- - https://angular.dev/guide/forms/reactive-forms
+
 
 - What are some form validators?
 - - FromControl class 
@@ -79,3 +82,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Adding custom validators to template-driven forms
 In template-driven forms, add a directive to the templa
 - https://angular.dev/guide/forms/form-validation#adding-custom-validators-to-template-driven-forms
+
+
+## Forms in Angular
+
+https://angular.dev/guide/forms
